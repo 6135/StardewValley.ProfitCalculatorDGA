@@ -26,11 +26,12 @@ namespace ProfitCalculatorDGA
         public override void Entry(IModHelper helper)
         {
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
-            helper.Events.GameLoop.GameLaunched += OnGameLaunchedParseCrops;
+            helper.Events.GameLoop.GameLaunched += OnSaveLoadedParseCrops;
             seedPriceOverrides = Helper.ModContent.Load<Dictionary<string, int>>(Path.Combine("assets", "SeedPrices.json"));
         }
 
-        private void OnGameLaunchedParseCrops(object? sender, GameLaunchedEventArgs e)
+        [EventPriority(EventPriority.Low - 9998)]
+        private void OnSaveLoadedParseCrops(object? sender, GameLaunchedEventArgs e)
         {
             this.BuildCrops();
         }
