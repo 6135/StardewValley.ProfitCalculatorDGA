@@ -1,11 +1,11 @@
 ﻿{
   "Name": "Profit Calculator DGA Support",
   "Author": "6135",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Description": "Adds Profit Calculator DGA support.",
   "UniqueID": "6135.ProfitCalculatorDGA",
   "EntryDll": "ProfitCalculatorDGA.dll",
-  "UpdateKeys": ["Nexus:19931"],
+  "UpdateKeys": [ "Nexus:19931" ],
   "Dependencies": [
     {
       "UniqueID": "6135.ProfitCalculator"
